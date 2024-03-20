@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>AgendaApp</title>
+</head>
+<body>
+    <h1>Agendamento:</h1>
+    <form method="post" th:action="@{/salvar}">
+        <label>Nome:</label>
+        <input type="text" th:field="${agendamento.nome}" /><br>
+        <label>Local:</label>
+        <input type="text" th:field="${agendamento.local}" /><br>
+        <label>Data:</label>
+        <input type="date" th:field="${agendamento.data}" /><br>
+        <label>Horario:</label>
+        <input type="time" th:field="${agendamento.horario}" /><br>
+        <label>Procedimento1:</label>
+        <input type="text" th:field="${agendamento.procedimento1}" /><br>
+        <label>Procedimento2:</label>
+        <input type="text" th:field="${agendamento.procedimento2}" /><br>
+        <label>Procedimento3:</label>
+        <input type="text" th:field="${agendamento.procedimento3}" /><br>
+        <label>Valor:</label>
+        <input type="text" th:field="${agendamento.valor}" /><br>
+        <label>Pagamento:</label>
+        <input type="text" th:field="${agendamento.pagamento}" /><br>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
